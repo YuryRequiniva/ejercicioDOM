@@ -1,35 +1,45 @@
 /* Estilos para tareas completadas */
-body {
+* {
   margin: 0;
   padding: 0;
   font-size: 16px;
-  font-family: Sans-serif, Helvetica, Arial;
   line-height: 1.5;
-
+  font-family: "Roboto", sans-serif;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 18px 0;
+  background: url(imagenes/fondo.jpg) no-repeat center center/cover;
   color: rgb(28, 27, 27);
 }
 .container {
-  margin-top: 15px;
-  margin-bottom: 30px;
-  max-width: 600px;
-  height: 200px;
-  margin-left: auto;
-  margin-right: auto;
-  align-items: center;
-  justify-content: center;
+  width: 600px;
+  min-height: 500px;
   background-color: white;
-  padding: 18px;
+  padding: 20px;
+  border: 5px solid black;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  padding: 18px 0;
+  gap: 5px;
 }
 h1 {
-  text-align: left;
-  justify-content: center;
-  color: rgb(25, 27, 27);
+  font-size: 50px;
+  font-weight: bold;
 }
-
 /* Estilos para tareas completadas */
 .completada {
   text-decoration: line-through;
   color: gray;
+  border: none;
 }
 #listaTareas {
   display: flex;
@@ -37,16 +47,22 @@ h1 {
   gap: 7px;
 }
 #listaTareas li {
+  color: rgb(16, 1, 1);
+
+  border-radius: 10px;
   display: flex;
+  align-items: center;
   gap: 7px;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 .btn-completar {
-  background-color: #2317ca78;
+  background-color: rgb(0, 255, 0);
   color: white;
   border: none;
   padding: 5px;
+  margin: 5px;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 /* Estilos para el botón Eliminar */
@@ -57,8 +73,37 @@ h1 {
   padding: 5px;
   border-radius: 5px;
 }
+.btn-completar:hover,
+.btn-eliminar:hover {
+  background-color: rgba(12, 221, 158, 0.523);
+}
 
 /* Estilos para los botones */
 button {
   margin-left: 5px;
+  width: 65px;
+  height: 35px;
+  padding: 8px;
+  color: white;
+  background-color: #1312a8;
+  font-size: 14px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+button {
+  display: flex;
+  flex-wrap: wrap;
+}
+button:hover {
+  background-color: rgb(10, 184, 184);
+}
+#nuevaTarea {
+  width: 30%;
+  height: 20px;
+  font-size: 14px;
+  padding: 8px;
+  border: 4px solid #404040;
+  border-radius: 10px;
+  user-select: none;
 }
